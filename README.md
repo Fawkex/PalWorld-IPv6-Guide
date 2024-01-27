@@ -21,6 +21,10 @@ realm会监听在IPv6的18211端口，将流量转发至IPv4的8211端口
 ```
 realm -l [::]:18211 -r 127.0.0.1:8211 -u
 ```
+#### 安装 Supervisor
+```
+sudo apt install supervisor
+```
 #### Supervisor 配置文件
 写入到`/etc/supervisor/conf.d/realm.conf`\
 写入完成后用`supervisorctl reload`重启supervisor，可以通过`supervisorctl status`查看realm状态。
