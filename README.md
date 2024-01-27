@@ -2,7 +2,8 @@
 Hosting PalWorld Server via IPv6 using rinetd. 使用rinetd，令PalWorld能使用IPv6开服和连接。
 # 简介
 目前幻兽帕鲁暂不支持原生IPv6协议栈，国内玩家想开服只能通过购买云服务器或是使用frp穿透服务等方式。\
-利用 [realm](https://github.com/zhboner/realm) ，我们可以在服务器端将IPv6流量转发到IPv4绑定的端口上，同时在客户端也使用rinetd，在本地绑定一个v4端口，转发到远端的IPv6端口上。这样便可实现使用IPv6架设幻兽帕鲁的服务器，玩家仅需要下载一个rinetd的二进制文件以及配置文件即可加入服务器。
+利用 [realm](https://github.com/zhboner/realm) ，我们可以在服务器端将IPv6流量转发到IPv4绑定的端口上，同时在客户端也使用realm，在本地绑定一个v4端口，转发到远端的IPv6端口上。这样便可实现使用IPv6架设幻兽帕鲁的服务器，玩家仅需要下载一个realm的二进制文件以及配置文件即可加入服务器。\
+除了使用realm外，服务端还需要使用一个DDNS工具将其IPv6地址更新到域名上，否则玩家每次都需要重新编辑配置文件修改IPv6地址。可以使用[DDNS-GO](https://github.com/jeessy2/ddns-go),或是我编写的[Aliyun-DDNS-Clientless](https://github.com/Fawkex/Aliyun-DDNS-Clientless)，前者部署难度较低。其他的DDNS工具自然也是可以的，只要支持IPv6即可。
 # 操作流程
 ## 服务端
 这里以Ubuntu-22.04为例，首先下载realm二进制文件。有能力的可以自己参考文档从头编译。
