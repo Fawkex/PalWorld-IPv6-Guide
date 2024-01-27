@@ -6,7 +6,7 @@ Hosting PalWorld Server via IPv6 using rinetd. 使用rinetd，令PalWorld能使�
 除了使用realm外，服务端还需要使用一个DDNS工具将其IPv6地址更新到域名上，否则玩家每次都需要重新编辑配置文件修改IPv6地址。可以使用[DDNS-GO](https://github.com/jeessy2/ddns-go)，或是我编写的[Aliyun-DDNS-Clientless](https://github.com/Fawkex/Aliyun-DDNS-Clientless)，前者部署难度较低。其他的DDNS工具自然也是可以的，只要支持IPv6即可。
 # 操作流程
 ## 服务端
-这里以Ubuntu-22.04为例，首先下载realm二进制文件。有能力的可以自己参考文档从头编译。
+这里以Ubuntu-22.04为例，首先下载realm二进制文件。有能力的可以自己参考文档从头编译。Windows服务端参考下面的客户端部分，修改`SERVER`和`LOCAL`参数即可。
 ### 下载安装 realm 
 ```
 wget https://github.com/zhboner/realm/releases/download/v2.5.2/realm-x86_64-unknown-linux-gnu.tar.gz
